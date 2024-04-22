@@ -1,0 +1,48 @@
+                <?php
+                    //check if form submitted, insert form data into users table.
+                    if(isset($_post['submit'])) {
+                        $namas = $_post['nama'];
+                        $usernames = $_post['username'];
+                        $emails = $_post['email'];
+                        $passwords = $_post['pasword'];
+                        $role = $_post['role'];
+                        //echo($judul);
+                        //include database connection file
+                        include_once("koneksi.php");
+
+                        //insert user data into table
+                        $result = mysqli_query($mysqli,"INSERT INTO user(nama,username,password,role,email,) VALUES ('$namas','$usernames','$paswords','$role','$emails')");
+                        
+                        //show message when user added
+                        // echo "data added successfully. <a href='index.php'>view data buku</a>";
+                        header("location:index.php");
+                    }
+                ?>
+
+                
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+if(isset($_POST["login"])){
+
+$username= $_POST["username"];
+$password= $_POST["password"];
+
+$result = mysqli_query($mysqli," SELECT * FROM user WHERE username= '$username' AND password='$password'");
+
+//cek username
+if( mysqli_num_rows($result ) === 1){
+$row =mysqli_fetch_assoc($result );
+    header("location:halaman utama.php");
+    echo "<script>
+    alert('Salamat Datang!')</script>";
+    exit;
+}
+
+
+$error=true;
+}
