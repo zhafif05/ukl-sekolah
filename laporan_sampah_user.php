@@ -22,15 +22,18 @@
         </ul>
       </nav>
       </header>
-      <section class="badan" >  <h1>Laporan sampah</h1>
+      <section class="badan" >  
+        <div>
+          <h1>Laporan sampah</h1>
+      </div>
       <body>
     <table border="1" align="center">
         <tr>
             <th >No</th>
             <th>Jenis Sampah</th>
             <th>Berat Sampah</th>
-            <th>Status</th>
             <th>Tanggal & Waktu</th>
+            <th>Lokasi Pembuangan</th>
         </tr>
     
 
@@ -50,8 +53,8 @@ while($data= mysqli_fetch_array($query_mysql)){
     <td><?php echo $nomor++;?></td>
     <td><?php echo $data["jenis_sampah"];?></td>
     <td><?php echo $data["berat_sampah"];?></td>
-    <td><?php echo $data["status"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>
+    <td><?php echo $data["lokasi_pembuangan"];?></td>
     <?php }?>
 
 </tr>

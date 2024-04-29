@@ -48,7 +48,10 @@ if(isset($_POST['register'])){
                 </div>
                 <div class="form-group">
                     <label for="role">Sebagai</label>
-                    <input type="role" class="form-control" id="role" name="role" placeholder="Pengguna Biasa / Ketua Rt">
+                    <select name="role" id="role" require>
+                        <option value="Ketua RT">Ketua Rt</option>
+                        <option value="Pengguna">Pengguna</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="username">username</label>

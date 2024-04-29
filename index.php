@@ -19,7 +19,7 @@ if(isset($_POST["login"])){
         $_SESSION['username'] = $username;
         $_SESSION['role'] = 'Ketua RT';
         //alihkan ke halaman dashboard admin
-        header("location:view.php");
+        header("location:halaman utama RT.php");
 
     //cek jika user login sebagai user        
     }
@@ -28,7 +28,7 @@ if(isset($_POST["login"])){
         $_SESSION['username'] = $username;
         $_SESSION['role'] = 'pengguna';
         //alihkan ke halaman dashboard user
-        header("location:view.php");
+        header("location:halaman utama_user.php");
 
     }else{
 
