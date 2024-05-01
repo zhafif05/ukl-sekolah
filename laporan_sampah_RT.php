@@ -27,7 +27,7 @@ if(isset($_POST['kirim'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZIP LAST</title>
-    <link rel="stylesheet" href="laporan.css">
+    <link rel="stylesheet" href="laporan1.css">
 </head>
 <body >
     <header class="kepala">
@@ -74,9 +74,11 @@ if(isset($_POST['kirim'])){
         </div>
     </div>
 </div>
-<div align="center" class="menubarr">
-      <a href="halaman utama_user.php" class="p">Kembali</a>
-      <a href="edit_sampah.php" class="p">lihat data</a>
+<div align="center" >
+    <ul class="pading">
+      <li><a href="halaman utama RT.php" class ="b">Kembali</a></li>
+      <li><a href="edit_sampah.php" class ="b">lihat data</a></li>
+    </ul>
 </div>
       </section>  
 </body> 

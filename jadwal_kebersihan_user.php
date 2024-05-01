@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZIP LAST</title>
-    <link rel="stylesheet" href="lihat.css">
+    <link rel="stylesheet" href="tabel.css">
 </head>
 <body >
     <header class="kepala">
@@ -22,8 +22,9 @@
         </ul>
       </nav>
       </header>
-      <section class="badan" >  <h1>Jadwal Kebersihan</h1>
-      <body>
+      <section class="badan" >  
+      <h1>Jadwal Kebersihan</h1>
+      <div class="center">
     <table border="1" align="center">
         <tr>
             <th >No</th>
@@ -55,9 +56,12 @@ while($data= mysqli_fetch_array($query_mysql)){
     <?php }?>
 
 </tr>
-</table><div>
-<a href="halaman utama_user.php" class="pencet">Kembali</a>
-  </div> 
+
+</table>
+</div>
+  <div>
+        <a href="halaman utama_user.php" class="pencet">Kembali</a>
+  </div>
 </section>
  </body>
    

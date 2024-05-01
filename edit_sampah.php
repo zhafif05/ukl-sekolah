@@ -33,7 +33,8 @@
             <th>Berat Sampah</th>
             <th>Tanggal & Waktu</th>
             <th>Lokasi Pembuangan</th>
-            <th>aksi</th>
+            <th colspan="2">aksi</th>
+            <th></th>
         </tr>
     
 
@@ -49,15 +50,15 @@ $query_mysql=mysqli_query($mysqli, "SELECT * FROM laporan_sampah ") or die (mysq
 while($data= mysqli_fetch_array($query_mysql)){
 ?>
 
-<tr>
+<tr >
     <td><?php echo $nomor++;?></td>
     <td><?php echo $data["jenis_sampah"];?></td>
     <td><?php echo $data["berat_sampah"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>
     <td><?php echo $data["lokasi_pembuangan"];?></td>
-    <td><span><a href='delet.php?id=<?php echo $data["id"];?>'>hapus</a></span></td>
+    <td ><span><a href='delet.php?id=<?php echo $data["id"];?>' class="aksi">hapus</a></span></td>
     <?php ?>
-    <td><span><a href='pengganti.php?id=<?php echo $data["id"];?>'>edit data</a></span></td>
+    <td ><span><a href='pengganti.php?id=<?php echo $data["id"];?>' class="aksi">edit data</a></span></td>
     <?php }?>
 
 </tr>

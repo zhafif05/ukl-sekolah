@@ -26,7 +26,7 @@
         <div>
           <h1>Laporan sampah</h1>
       </div>
-      <body>
+      <div class="center">
     <table border="1" align="center">
         <tr>
             <th >No</th>
@@ -59,11 +59,11 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 </tr>
 </table>
-<div >
+</div>
+<div>
 <a href="halaman utama_user.php" class="pencet">Kembali</a>
    </div>
 </section>
- </body>
 
 </body> 
  <footer>
