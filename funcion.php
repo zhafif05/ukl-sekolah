@@ -9,7 +9,7 @@ function register ($data){
     $RT=$data['RT'];
     $alamat=$data['alamat'];
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 //sudah ada username 
 $result = mysqli_query($mysqli," SELECT * FROM user WHERE username= '$username' ");

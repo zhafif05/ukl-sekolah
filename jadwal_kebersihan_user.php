@@ -24,7 +24,7 @@
       </header>
       <section class="badan" >  <h1>Jadwal Kebersihan</h1>
       <body>
-    <table border="1" >
+    <table border="1" align="center">
         <tr>
             <th >No</th>
             <th>Lokasi</th>
@@ -39,7 +39,7 @@
 
 $nomor=1;
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 $query_mysql=mysqli_query($mysqli, "SELECT * FROM jadwal_kebersihan ") or die (mysqli_error());
 

@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 require 'funcion.php';
 

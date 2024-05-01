@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 if(isset($_POST["login"])){
 

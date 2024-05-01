@@ -6,7 +6,7 @@ function register ($data){
     $RT=$data['Rt'];
     $tanggal =$data["tanggal_waktu"];
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 $query = "INSERT INTO laporan_masalah VALUES ('','$nama','$laporan','$RT','$tanggal')";
 if ($mysqli->query($query)) {
@@ -30,7 +30,7 @@ $berat_sampah=$data['berat_sampah'];
 $tanggal_waktu=$data['tanggal_waktu'];
 $lokasi_pembuangan =$data["lokasi_pembuangan"];
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 $query = "INSERT INTO laporan_sampah VALUES ('','$jenis_sampah','$berat_sampah','$tanggal_waktu','$lokasi_pembuangan')";
 if ($mysqli->query($query)) {

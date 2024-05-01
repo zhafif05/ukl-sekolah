@@ -65,6 +65,7 @@ body{
     background-color: crimson;
    padding: 10px;
    border-radius: 2px;
+   font-size: 30px;
 }
 
 .p:hover{
@@ -74,10 +75,11 @@ body{
 .badan{
     padding-top: 5%;
     text-align: center;
-    font-size: 50px;
+    font-size:45px;
     font-weight: 800;
     color:white;
     align-items: center;
+    padding-bottom: 5%;
 
 
 }
@@ -100,5 +102,10 @@ footer{
     text-decoration: none;
     border-radius: 10px;
     color: black;
+    
+
+}
+.border{
+    font-size: small;
 }
 

@@ -15,25 +15,25 @@
       </div>
       <nav >
         <ul  class="menubar">
-          <li><a href="halaman utama_user.php">HOME </a></li>
-          <li ><a href="laporan_sampah_user.php"class="p">LAPORAN SAMPAH</a></li>
-          <li><a href="laporan_masalah_user.php">LAPORAN MASALAH</a></li>
-          <li ><a href="jadwal_kebersihan_user.php">JADWAL KEBERSIHAN</a></li>
+          <li><a href="halaman utama RT.php">HOME </a></li>
+          <li ><a href="laporan_sampah_RT.php"class="p">LAPORAN SAMPAH</a></li>
+          <li><a href="laporan_masalah_RT.php">LAPORAN MASALAH</a></li>
+          <li ><a href="jadwal_kebersihan_RT.php">JADWAL KEBERSIHAN</a></li>
         </ul>
       </nav>
       </header>
-      <section class="badan" >  
+      <section  class="badan">  
         <div>
           <h1>Laporan sampah</h1>
       </div>
-      <body>
-    <table border="1" align="center">
+    <table border="1" align="center" >
         <tr>
             <th >No</th>
             <th>Jenis Sampah</th>
             <th>Berat Sampah</th>
             <th>Tanggal & Waktu</th>
             <th>Lokasi Pembuangan</th>
+            <th>aksi</th>
         </tr>
     
 
@@ -55,17 +55,19 @@ while($data= mysqli_fetch_array($query_mysql)){
     <td><?php echo $data["berat_sampah"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>
     <td><?php echo $data["lokasi_pembuangan"];?></td>
+    <td><span><a href='delet.php?id=<?php echo $data["id"];?>'>hapus</a></span></td>
+    <?php ?>
+    <td><span><a href='pengganti.php?id=<?php echo $data["id"];?>'>edit data</a></span></td>
     <?php }?>
 
 </tr>
 </table>
 <div >
-<a href="halaman utama_user.php" class="pencet">Kembali</a>
+<a href="laporan_sampah_RT.php" class="pencet">Kembali</a>
    </div>
 </section>
  </body>
 
-</body> 
  <footer>
         <p class="akhir">&copy; 2023 Landing Page. ZIP LAST.</p>
       </footer>

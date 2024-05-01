@@ -21,7 +21,7 @@
 
 $nomor=1;
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 $query_mysql=mysqli_query($mysqli, "SELECT * FROM user ") or die (mysqli_error());
 

@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 require 'funcion_masalah.php';
 
@@ -76,8 +76,8 @@ if(isset($_POST['kirim'])){
 </div>
 <div align="center" class="menubarr">
       <a href="halaman utama_user.php" class="p">Kembali</a>
-      <a href="edit_data.php" class="p">lihat data</a>
- </div>
+      <a href="edit_sampah.php" class="p">lihat data</a>
+</div>
       </section>  
 </body> 
  <footer>

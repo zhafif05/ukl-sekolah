@@ -1,20 +1,20 @@
 
 <?php
 
-$mysqli = new mysqli('localhost', 'root', '', 'web tanaman langka');
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 
 //cek apakah tombol simpan sudah diklik atau belum
 if(isset($_POST['simpan'])){
     $id = $_POST['id'];
-    $nama = $_POST['nama']; 
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
-    $role = $_POST['role'];
+    $jenis_sampah = $_POST['jenis_sampah']; 
+    $berat_sampah = $_POST['berat_sampah'];
+    $tanggal_waktu = $_POST['tanggal_waktu'];
+    $lokasi_pembuangan = $_POST['lokasi_pembuangan'];
     
     //buat query update
-    $result = mysqli_query($mysqli, "UPDATE user SET nama='$nama', username='$username', password='$password', role='$role' WHERE id=$id");
-    header('location:view.php');
+    $result = mysqli_query($mysqli, "UPDATE laporan_sampah SET jenis_sampah='$jenis_sampah', berat_sampah='$berat_sampah', tanggal_waktu='$tanggal_waktu', lokasi_pembuangan='$lokasi_pembuangan' WHERE id=$id");
+    header('location:edit_sampah.php');
 } else {
     die("Akses dilarang...");
 }
