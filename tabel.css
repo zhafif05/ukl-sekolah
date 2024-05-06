@@ -4,15 +4,6 @@
     padding: 0;
 }
 
-body{
-    background-position: relative;
-    background-image: url("Desain\ tanpa\ judul.png")  ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-
-    
-}
 
 .kepala{
     display: flex;
@@ -23,7 +14,9 @@ body{
     height: 70px;
     background-color: black;
     box-shadow: 0 5px 15 0 rgb(0, 0, 0,5);
+
 }
+
 .nama{
     display: flex;
     flex-direction: row;
@@ -83,6 +76,13 @@ body{
     padding-bottom: 5%;
     align-items: center;
     
+    background-position: relative;
+    background-image: url("Desain\ tanpa\ judul.png")  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+
+    padding-bottom: 50%;
 
 
 

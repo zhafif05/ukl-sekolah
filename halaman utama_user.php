@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZIP LAST</title>
-    <link rel="stylesheet" href="lihat.css">
+    <link rel="stylesheet" href="tabel.css">
 </head>
 <body >
     <header class="kepala">
@@ -27,5 +27,5 @@
 </body> 
  <footer>
         <p class="akhir">&copy; 2023 Landing Page. ZIP LAST.</p>
-      </footer>
+         </footer>
 </html>

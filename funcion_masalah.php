@@ -3,12 +3,13 @@ function register ($data){
 
     $nama =$data['nama'];
     $laporan=$data['laporan'];
-    $RT=$data['Rt'];
     $tanggal =$data["tanggal_waktu"];
+    $RT=$data["iduser"];
+    
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query = "INSERT INTO laporan_masalah VALUES ('','$nama','$laporan','$RT','$tanggal')";
+$query = "INSERT INTO laporan_masalah VALUES ('','$nama','$laporan','$tanggal','$RT')";
 if ($mysqli->query($query)) {
 
     echo "<script>

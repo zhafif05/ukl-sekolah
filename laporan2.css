@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+
 }
 
 .kepala{
@@ -74,26 +75,27 @@ footer{
 
 
 }
-  
-body {
+.badan{
+    
     background-position: relative;
     background-image: url("Desain\ tanpa\ judul.png")  ;
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
+    padding-bottom: 10%;
+    padding-top: 5px;
 
-    
 }
   
+
 .container {
     width: 400px;
     margin: 0 auto;
-    margin-top: 50px;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    
-    
+    margin-top: 40px;
+
+
 }
   
 h1 {
@@ -169,4 +171,5 @@ a:hover {
     background-color:crimson ;
     padding: 10px;
     border-radius: 2px;
+    text-decoration: none;
 }
