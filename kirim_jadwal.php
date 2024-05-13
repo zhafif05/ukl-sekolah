@@ -3,9 +3,9 @@ $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 require 'funcion_masalah.php';
 
-if(isset($_POST['kirim'])){
+if(isset($_POST['kirim2'])){
 
-    if(kirim($_POST)> 0){
+    if(kirim2($_POST)> 0){
         echo "<script>
         alert('User Baru Berhasil Ditambahkan!')</script>";
     }
@@ -38,49 +38,47 @@ if(isset($_POST['kirim'])){
       <nav >
         <ul  class="menubar">
           <li><a href="halaman utama RT.php">HOME </a></li>
-          <li ><a href="laporan_sampah_RT.php"class="p">LAPORAN SAMPAH</a></li>
+          <li ><a href="laporan_sampah_RT.php">LAPORAN SAMPAH</a></li>
           <li><a href="laporan_masalah_RT.php">LAPORAN MASALAH</a></li>
-          <li ><a href="jadwal_kebersihan_RT.php">JADWAL KEBERSIHAN</a></li>
+          <li ><a href="jadwal_kebersihan_RT.php" class="p">JADWAL KEBERSIHAN</a></li>
         </ul>
       </nav>
       </header>
-      <section class="badan">
-        <div class="kosongan"></div> 
+    <section class="badan">
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <h1>Laporan Sampah</h1>
+            <h1>Jadwal_kebersihan</h1>
             <form action="" method="post">
                 <div class="form-group">
-                    <label for="jenis_sampah">jenis_sampah</label>
-                    <input type="text" class="form-control" id="jenis_sampah" name="jenis_sampah" placeholder="Masukkan jenis_sampah">
+                    <label for="lokasi">lokasi</label>
+                    <input type="text" class="form-control" id="lokasi" name="lokasi">
                 </div>
                 <div class="form-group">
-                    <label for="berat_sampah">berat_sampah</label>
-                    <input type="text" class="form-control" id="berat_sampah" name="berat_sampah" placeholder="Maksukan berat_sampah">
+                    <label for="tanggal">tanggal</label>
+                    <input type="text" class="form-control" id="tanggal" name="tanggal" >
                 </div>
                 <div class="form-group">
-                    <label for="tanggal_waktu">tanggal_waktu</label>
-                    <input type="text" class="form-control" id="tanggal_waktu" name="tanggal_waktu" placeholder="Masukkan tanggal_waktu">
+                    <label for="tugas">tugas</label>
+                    <input type="text" class="form-control" id="tugas" name="tugas" >
                 </div>
                 <div class="form-group">
-                    <label for="lokasi_pembuangan">lokasi_pembuangan</label>
-                    <input type="text" class="form-control" id="lokasi_pembuangan" name="lokasi_pembuangan" placeholder="Masukkan lokasi_pembuangan">
+                    <label for="jam">jam</label>
+                    <input type="text" class="form-control" id="jam" name="jam">>
                 </div>
-                <button name="kirim" type="submit" class="btn btn-primary">Kirim</button>
-
+                <button name="kirim2" type="submit" class="btn btn-primary" value="kirim2">Kirim</button>
 
 
             </form>
         </div>
     </div>
 </div>
-<div align="center" >
-    <ul class="pading">
-      <li><a href="halaman utama RT.php" class ="pencet">Kembali</a></li>
-      <li><a href="edit_sampah.php" class ="pencet">lihat data</a></li>
+
+<ul class="pading">
+      <li><a href="jadwal_kebersihan_RT.php" class ="pencet">Kembali</a></li>
     </ul>
-</div>
+
+</section>
       </section>  
 </body> 
  <footer>

@@ -75,18 +75,15 @@
     align-items: center;
     padding-bottom: 5%;
     align-items: center;
-    
     background-position: relative;
     background-image: url("Desain\ tanpa\ judul.png")  ;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-
     padding-bottom: 50%;
-
-
-
+    padding-left: 10px;
 }
+
 footer{
     background: black;
     color: white;
@@ -99,6 +96,31 @@ footer{
 
 
 }
+
+.pading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+
+    
+}
+.pading:hover{
+    color: #000;
+}
+
+.pading>li{
+    padding: 20px;
+}
+
+
+
 .pencet{
     font-size: 30px;
     background-color: crimson ;
@@ -114,6 +136,16 @@ footer{
     color: black;
 }
 
-.aksi>tr>td>a{
+.pencett{
+    font-size: 30px;
+    padding: 5px;
     text-decoration: none;
+    border-radius: 10px;
+    color: crimson;
+    text-transform: capitalize;
+    
+}
+
+.pencett:hover{
+    color: black;
 }

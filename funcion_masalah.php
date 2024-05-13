@@ -1,15 +1,13 @@
 <?php
-function register ($data){
+function submit ($data){
 
-    $nama =$data['nama'];
-    $laporan=$data['laporan'];
-    $tanggal =$data["tanggal_waktu"];
-    $RT=$data["iduser"];
+    $laporan= $data['laporan'];
+    $tanggal = $data["tanggal_waktu"];
     
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query = "INSERT INTO laporan_masalah VALUES ('','$nama','$laporan','$tanggal','$RT')";
+$query = "INSERT INTO laporan_masalah VALUES ('','$laporan','$tanggal','')";
 if ($mysqli->query($query)) {
 
     echo "<script>
@@ -45,6 +43,33 @@ echo "Error: " . $mysqli->error;
 
 $mysqli->close();
 }
+
+
+
+function kirim2 ($data){
+
+    $lokasi = $_POST['lokasi']; 
+    $tanggal = $_POST['tanggal'];
+    $tugas = $_POST['tugas'];
+    $jam = $_POST['jam'];
+    
+    $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
+    
+    $query = "INSERT INTO jadwal_kebersihan VALUES ('','$lokasi','$tanggal','$tugas','$jam','')";
+
+    if ($mysqli->query($query)) {
+    
+    echo "<script>
+    alert('Data Sudah Terkirim!')</script>";
+    
+    } else {
+    echo "Error: " . $mysqli->error;
+    }
+    
+    $mysqli->close();
+    }
+
+
 
 ?>
 

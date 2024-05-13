@@ -28,28 +28,29 @@ $lokasi_pembuangan = $data['lokasi_pembuangan'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="laporan.css">
+    <link rel="stylesheet" href="laporan2.css">
 </head>
 <body>
+    <section class="badan">
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <h1>Laporan Sampah</h1>
             <form action="edit.php" method="post">
                 <div class="form-group">
-                    <label for="jenis_sampah">jenis_sampah</label>
+                    <label for="jenis_sampah">Jenis_sampah</label>
                     <input type="text" class="form-control" id="jenis_sampah" name="jenis_sampah"value="<?php echo $jenis_sampah ;?>">
                 </div>
                 <div class="form-group">
-                    <label for="berat_sampah">berat_sampah</label>
+                    <label for="berat_sampah">Berat_sampah</label>
                     <input type="text" class="form-control" id="berat_sampah" name="berat_sampah" value="<?php echo $berat_sampah ;?>">
                 </div>
                 <div class="form-group">
-                    <label for="tanggal_waktu">tanggal_waktu</label>
+                    <label for="tanggal_waktu">Tanggal_waktu</label>
                     <input type="text" class="form-control" id="tanggal_waktu" name="tanggal_waktu" value="<?php echo $tanggal_waktu ;?>">
                 </div>
                 <div class="form-group">
-                    <label for="lokasi_pembuangan">lokasi_pembuangan</label>
+                    <label for="lokasi_pembuangan">Lokasi_pembuangan</label>
                     <input type="text" class="form-control" id="lokasi_pembuangan" name="lokasi_pembuangan" value="<?php echo $lokasi_pembuangan ;?>">>
                 </div>
                 <button name="simpan" type="submit" class="btn btn-primary" value="simpan">Kirim</button>
@@ -60,6 +61,11 @@ $lokasi_pembuangan = $data['lokasi_pembuangan'];
         </div>
     </div>
 </div>
-
+<div>
+<ul class="pading">
+      <li><a href="edit_sampah.php" class ="pencet">Kembali</a></li>
+    </ul>
+   </div>
+</section>
 </body>
 </html>
