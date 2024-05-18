@@ -13,6 +13,9 @@ if(isset($_POST["login"])){
     //cek username
     if( mysqli_num_rows($result )>0){
     $row =mysqli_fetch_assoc($result );
+    $iduser = $row['iduser'];
+    $_SESSION['iduser'] = $iduser;
+
     if($row['role']=="Ketua RT"){
 
 

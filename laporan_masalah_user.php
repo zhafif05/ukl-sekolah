@@ -57,8 +57,12 @@ if(isset($_POST['submit'])){
                 <div class="form-group">
 
                     <label for="tanggal_waktu">Tanggal/Waktu</label>
-                    <input type="text" class="form-control" id="tanggal_waktu" name="tanggal_waktu" placeholder="Masukkan Tanggal">
+                    <input type="date" class="form-control" id="tanggal_waktu" name="tanggal_waktu" placeholder="Masukkan Tanggal">
                 </div>
+                <input type="hidden" name="iduser" 
+                value=<?php $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
+                $result = mysqli_query($mysqli," SELECT * FROM user WHERE iduser ");
+                ?>>
                 <button name="submit" type="submit" class="btn btn-primary">Kirim</button>
 
 

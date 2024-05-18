@@ -50,7 +50,7 @@ if(isset($_POST['register'])){
                     <label for="role">Sebagai</label>
                     <select name="role" id="role" require>
                         <option value="Ketua RT">Ketua Rt</option>
-                        <option value="Pengguna">Pengguna</option>
+                        <option value="pengguna">Pengguna</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@ if(isset($_POST['register'])){
                 </div>
                 <div class="form-group">
                     <label for="username">RT</label>
-                    <input type="text" class="form-control" id="RT" name="RT" placeholder="Masukkan RT">
+                    <input type="number" min="1" max="10" class="form-control" id="RT" name="RT" placeholder="Masukkan RT">
                 </div>
                 <div class="form-group">
                     <label for="username">Alamat</label>

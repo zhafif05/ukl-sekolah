@@ -61,7 +61,7 @@ if(isset($_POST['kirim'])){
                 </div>
                 <div class="form-group">
                     <label for="tanggal_waktu">tanggal_waktu</label>
-                    <input type="text" class="form-control" id="tanggal_waktu" name="tanggal_waktu" placeholder="Masukkan tanggal_waktu">
+                    <input type="date" class="form-control" id="tanggal_waktu" name="tanggal_waktu" placeholder="Masukkan tanggal_waktu">
                 </div>
                 <div class="form-group">
                     <label for="lokasi_pembuangan">lokasi_pembuangan</label>
@@ -86,4 +86,5 @@ if(isset($_POST['kirim'])){
  <footer>
         <p class="akhir">&copy; 2023 Landing Page. ZIP LAST.</p>
       </footer>
+</html>
 </html>

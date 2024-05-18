@@ -29,6 +29,7 @@
     <table border="1" align="center" >
         <tr>
             <th >No</th>
+            <th >Nama</th>
             <th>Jenis Sampah</th>
             <th>Berat Sampah</th>
             <th>Tanggal & Waktu</th>
@@ -52,6 +53,7 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 <tr >
     <td><?php echo $nomor++;?></td>
+    <td><?php echo $data["iduser"];?></td>
     <td><?php echo $data["jenis_sampah"];?></td>
     <td><?php echo $data["berat_sampah"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>

@@ -12,12 +12,12 @@ function register ($data){
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 //sudah ada username 
-$result = mysqli_query($mysqli," SELECT * FROM user WHERE username= '$username' ");
+$result = mysqli_query($mysqli," SELECT * FROM user WHERE email= '$email' ");
 
 if(mysqli_fetch_assoc($result )){
 
     echo "<script>
-    alert('Username Sudah Ada!')</script>";
+    alert('Email Sudah Ada!')</script>";
 
     return false;
 

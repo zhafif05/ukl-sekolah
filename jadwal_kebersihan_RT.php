@@ -55,7 +55,7 @@ while($data= mysqli_fetch_array($query_mysql)){
     <td><?php echo $data["tanggal"];?></td>
     <td><?php echo $data["tugas"];?></td>
     <td><?php echo $data["jam"];?></td>
-    <td ><span><a href='delet.php?id=<?php echo $data["id"];?>' class="pencett">hapus</a></span></td>
+    <td ><span><a href='delet2.php?id=<?php echo $data["id"];?>' class="pencett">hapus</a></span></td>
     <?php ?>
     <td ><span><a href='pengganti2.php?id=<?php echo $data["id"];?>' class="pencett">edit data</a></span></td>
    

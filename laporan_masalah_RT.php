@@ -31,8 +31,11 @@
         <tr>
             <th >No</th>
             <th>Nama</th>
+            <th>RT</th>
             <th>isi</th>
             <th>Tanggal & Waktu</th>
+
+
         </tr>
     
 
@@ -50,9 +53,10 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 <tr>
     <td><?php echo $nomor++;?></td>
-    <td></td>
+    <td><?php echo $data["iduser"];?></td>
     <td><?php echo $data["laporan"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>
+
     <?php }?>
 
 </tr>
