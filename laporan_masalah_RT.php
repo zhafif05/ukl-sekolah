@@ -24,7 +24,7 @@
       </header>
       <section class="badan" >  
         <div>
-          <h1>Laporan sampah</h1>
+          <h1>Laporan Sampah</h1>
       </div>
       <div class="center">
     <table border="1" align="center">
@@ -32,7 +32,7 @@
             <th >No</th>
             <th>Nama</th>
             <th>RT</th>
-            <th>isi</th>
+            <th>Isi</th>
             <th>Tanggal & Waktu</th>
 
 
@@ -48,12 +48,17 @@ $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 $query_mysql=mysqli_query($mysqli, "SELECT * FROM laporan_masalah ") or die (mysqli_error());
 
-while($data= mysqli_fetch_array($query_mysql)){
+
+$resutl=mysqli_query($mysqli, "SELECT laporan_masalah.idmasalah,laporan_masalah.laporan,laporan_masalah.tanggal_waktu,user.nama,user.RT FROM laporan_masalah JOIN user ON laporan_masalah.iduser = user.iduser") or die (mysqli_error());
+
+
+while($data= mysqli_fetch_array($resutl)){
 ?>
 
 <tr>
     <td><?php echo $nomor++;?></td>
-    <td><?php echo $data["iduser"];?></td>
+    <td><?php echo $data["nama"];?></td>
+    <td><?php echo $data["RT"];?></td>
     <td><?php echo $data["laporan"];?></td>
     <td><?php echo $data["tanggal_waktu"];?></td>
 
@@ -62,9 +67,11 @@ while($data= mysqli_fetch_array($query_mysql)){
 </tr>
 </table>
 </div>
-<div>
-<a href="halaman utama_user.php" class="pencet">Kembali</a>
-   </div>
+<div> 
+    <ul class="pading">
+      <li><a href="halaman utama RT.php" class ="pencet">Kembali</a></li>
+    </ul>
+  </div>
 </section>
 
 </body> 

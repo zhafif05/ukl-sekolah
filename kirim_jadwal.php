@@ -50,21 +50,29 @@ if(isset($_POST['kirim2'])){
         <div class="col-md-6 offset-md-3">
             <h1>Jadwal_kebersihan</h1>
             <form action="" method="post">
+            <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+            <div class="form-group">
+                    <label for="RT">Rt</label>
+                    <input type="number" min="1" max="10" class="form-control" id="RT" name="RT">
+                </div>
                 <div class="form-group">
-                    <label for="lokasi">lokasi</label>
+                    <label for="lokasi">Lokasi</label>
                     <input type="text" class="form-control" id="lokasi" name="lokasi">
                 </div>
                 <div class="form-group">
-                    <label for="tanggal">tanggal</label>
-                    <input type="text" class="form-control" id="tanggal" name="tanggal" >
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" >
                 </div>
                 <div class="form-group">
-                    <label for="tugas">tugas</label>
+                    <label for="tugas">Tugas</label>
                     <input type="text" class="form-control" id="tugas" name="tugas" >
                 </div>
                 <div class="form-group">
-                    <label for="jam">jam</label>
-                    <input type="text" class="form-control" id="jam" name="jam">>
+                    <label for="jam">Jam</label>
+                    <input type="time" class="form-control" id="jam" name="jam">>
                 </div>
                 <button name="kirim2" type="submit" class="btn btn-primary" value="kirim2">Kirim</button>
 

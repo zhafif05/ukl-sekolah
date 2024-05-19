@@ -66,20 +66,22 @@
     color: black !important;
 
 }
+
+
+
 .badan{
     padding-top: 5%;
-    text-align: center;
-    font-size:35px;
-    font-weight: 600;
+    text-align: left;
+    font-size:30px;
+    font-weight: 500;
     color:black;
-    align-items: center;
-    align-items: center;
+    padding-bottom: 50%;
     background-position: relative;
     background-image: url("pexels-emmet-35167-128421.jpg")  ;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    padding-bottom: 50%;
+
 }
 
 footer{
@@ -92,65 +94,5 @@ footer{
     text-align: center;
 
 
-
-}
-
-.pading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 15px;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-    text-transform: capitalize;
-
-
-    
-}
-.pading:hover{
-    color: #000;
-}
-
-.pading>li{
-    padding: 20px;
-}
-
-
-
-.pencet{
-    font-size: 30px;
-    background-color: crimson ;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 10px;
-    color: black;
-    text-transform: capitalize;
-    
-
-}
-.pencet:hover{
-    color: white;
-}
-
-.pencett{
-    font-size: 30px;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 10px;
-    color: crimson;
-    text-transform: capitalize;
-    
-}
-
-.pencett:hover{
-    color: white;
-}
-
-
-
-.tabel{
-    padding: 30px;
 
 }

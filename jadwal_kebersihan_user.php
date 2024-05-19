@@ -28,6 +28,8 @@
     <table border="1" align="center">
         <tr>
             <th >No</th>
+            <th >Nama</th>
+            <th >RT</th>
             <th>Lokasi</th>
             <th>Tanggal</th>
             <th>Tugas</th>
@@ -49,6 +51,8 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 <tr>
     <td><?php echo $nomor++;?></td>
+    <td><?php echo $data["nama"];?></td>
+    <td><?php echo $data["RT"];?></td>
     <td><?php echo $data["lokasi"];?></td>
     <td><?php echo $data["tanggal"];?></td>
     <td><?php echo $data["tugas"];?></td>
@@ -59,9 +63,11 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 </table>
 </div>
-  <div>
-        <a href="halaman utama_user.php" class="pencet">Kembali</a>
-  </div>
+<div>
+<ul class="pading">
+      <li><a href="halaman utama_user.php" class ="pencet">Kembali</a></li>
+    </ul>
+   </div>
 </section>
  </body>
    

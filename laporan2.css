@@ -79,7 +79,7 @@ footer{
 .badan{
     
     background-position: relative;
-    background-image: url("Desain\ tanpa\ judul.png")  ;
+    background-image: url("pexels-emmet-35167-128421.jpg")  ;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 30%;
@@ -95,7 +95,7 @@ footer{
     width: 400px;
     margin: 0 auto;
     padding: 30px;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     border-radius: 4px;
     margin-top: 40px;
     text-align: left;
@@ -105,7 +105,7 @@ footer{
   
 h1 {
     text-align: center;
-    color: white;
+    color: black;
 }
   
 form {
@@ -121,7 +121,7 @@ label {
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 4px;
 }
   
@@ -130,7 +130,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: #000;
-    color: #fff;
+    color:#fff;
     border: 1px solid #000;
     border-radius: 4px;
     cursor: pointer;
@@ -148,7 +148,7 @@ a:hover {
 
 
 .form-group {
-    color: white;
+    color: black;
 }
 
 .pading{
@@ -179,12 +179,12 @@ a:hover {
     padding: 5px;
     text-decoration: none;
     border-radius: 10px;
-    color: white;
+    color: black;
     text-transform: capitalize;
     text-align: center;
     
 
 }
 .pencet:hover{
-    color: black;
+    color: white;
 }

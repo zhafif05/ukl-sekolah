@@ -25,9 +25,11 @@
       <section class="badan" >  
       <h1>Jadwal Kebersihan</h1>
       <div class="center">
-    <table border="1" align="center">
+    <table border="1" align="center" class="tabel" >
         <tr>
             <th >No</th>
+            <th >Nama</th>
+            <th >RT</th>
             <th>Lokasi</th>
             <th>Tanggal</th>
             <th>Tugas</th>
@@ -51,6 +53,8 @@ while($data= mysqli_fetch_array($query_mysql)){
 
 <tr>
     <td><?php echo $nomor++;?></td>
+    <td><?php echo $data["nama"];?></td>
+    <td><?php echo $data["RT"];?></td>
     <td><?php echo $data["lokasi"];?></td>
     <td><?php echo $data["tanggal"];?></td>
     <td><?php echo $data["tugas"];?></td>

@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZIP LAST</title>
-    <link rel="stylesheet" href="tabel.css">
+    <link rel="stylesheet" href="hlm.css">
 </head>
 <body >
     <header class="kepala">
@@ -22,7 +24,11 @@
       </nav>
       </header>
       <section class="badan" >
-        <div>Selamat Datang !!</div>
+        <h1>Selamat Datang Di Aplikasi EMS !!<h1>
+        <br>
+        <div>Apa Itu EMS ?</div>
+        <div>sistem terstruktur yang membantu suatu perusahaan untuk mengidentifikasi dampak lingkungan yang dihasilkan dari kegiatan bisnisnya dan untuk meningkatkan kinerja lingkungannya. Sistem ini bertujuan untuk memberikan pendekatan metodis untuk merencanakan, menerapkan dan meninjau manajemen lingkungan perusahaan.</div>
+
       </section>  
 </body> 
  <footer>
