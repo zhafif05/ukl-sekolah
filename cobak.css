@@ -1,85 +1,51 @@
-*,html body{
-
+/* Reset some default styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
 }
 
-
-.kepala{
-    display: flex;
-    justify-content: space-between;
-    font-size: 50px;
-    padding: 15px;
-    width: 100%;
-    height: 70px;
-    background-color: black;
-    box-shadow: 0 5px 15 0 rgb(0, 0, 0,5);
-
+header nav ul li {
+    margin: 0 1rem;
 }
 
-.nama{
-    display: flex;
-    flex-direction: row;
-}
-
-.namapertama{
-    color:hsl(0, 0%, 100%);
-    font-weight: 800;
-
-}
-
-.namaterakhir{
-    color:crimson;
-   padding-left: 5px;
-}
-
-.menubar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menubar>li{
-    list-style: none;
-    padding: 20px;
-}
-   
-.menubar>li>a{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: capitalize;
-
-    
-    
-}
-.menubar>li>a:hover{
-    color: crimson;
-}
-.p{
-    background-color: crimson;
-   padding: 10px;
-   border-radius: 2px;
-   font-size: 30px;
-}
-
-.p:hover{
-    color: black !important;
-
-}
-
-.btn {
-    background: #fff;
-    color: #4CAF50;
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    font-size: 30px;
-    padding: 5px;
+}
 
-}
-.btn:hover{
-    color: crimson;
-}
+/* Hero Section */
 .hero {
     position: relative;
     background: url('pexels-emmet-35167-128421.jpg') no-repeat center center/cover;
@@ -116,7 +82,14 @@
     margin-bottom: 1.5rem;
 }
 
-
+.hero .btn {
+    background: #fff;
+    color: #4CAF50;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
 .hero .btn:hover {
     background: #f4f4f4;
@@ -124,7 +97,7 @@
 
 /* Features Section */
 .features {
-    background: gray;
+    background: #f4f4f4;
     padding: 3rem 0;
 }
 
@@ -136,18 +109,17 @@
 }
 
 .features .feature {
-    background: rgb(202, 202, 202);;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     text-align: center;
     flex: 1;
-    padding-bottom: 5%;
 }
 
 .features .feature img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 1rem;
 }
 
@@ -161,15 +133,11 @@
     color: #333;
 }
 
-footer{
-    background: black;
-    color: white;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
     text-align: center;
-
-
-
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
