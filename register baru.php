@@ -38,6 +38,12 @@ if(isset($_POST['register'])){
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama">
                 </div>
+                
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username">
+                </div>
+                
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email">
@@ -52,10 +58,6 @@ if(isset($_POST['register'])){
                         <option value="Ketua RT">Ketua Rt</option>
                         <option value="pengguna">Pengguna</option>
                     </select>
-                </div>
-                <div class="form-group">
-                    <label for="username">username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username">
                 </div>
                 <div class="form-group">
                     <label for="username">RT</label>

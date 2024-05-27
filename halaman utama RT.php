@@ -40,7 +40,7 @@ if(isset($_POST['logout'])){
         <h1>Selamat Datang Di Aplikasi EMS !!<h1>
         <br>
         <div>Apa Itu EMS ?</div>
-        <div>sistem terstruktur yang membantu suatu perusahaan untuk mengidentifikasi dampak lingkungan yang dihasilkan dari kegiatan bisnisnya dan untuk meningkatkan kinerja lingkungannya. Sistem ini bertujuan untuk memberikan pendekatan metodis untuk merencanakan, menerapkan dan meninjau manajemen lingkungan perusahaan.</div>
+        <div>Sistem terstruktur ini membantu mengidentifikasi dampak lingkungan yang dihasilkan dari aktivitas di lingkungan sekitar atau pedesaan, serta bertujuan untuk meningkatkan kinerja lingkungan di daerah tersebut. Sistem ini menyediakan pendekatan metodis untuk merencanakan, menerapkan, dan meninjau manajemen lingkungan di wilayah pedesaan atau sekitar.</div>
 </section>  
 </body> 
  <footer>

@@ -5,10 +5,10 @@ $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 if(isset($_POST["login"])){
 
-    $username= $_POST["username"];
+    $email= $_POST["email"];
     $password= $_POST["password"];
 
-    $result = mysqli_query($mysqli," SELECT * FROM user WHERE username= '$username' AND password='$password'");
+    $result = mysqli_query($mysqli," SELECT * FROM user WHERE email= '$email' AND password='$password'");
 
     //cek username
     if( mysqli_num_rows($result )>0){
@@ -60,8 +60,8 @@ if(isset($_POST["login"])){
         <div class="container">
             <h1>LOG-IN</h1><br>
             <form action="" method="post">
-                <input type="text" id="password" name="username" placeholder="username">
-                <input type="password" id="username" name="password"placeholder="password">
+                <input type="email" id="email" name="email" placeholder="email">
+                <input type="password" id="password" name="password"placeholder="password">
                 <?php if(isset($error)):?>
                 <p align="center" style="color : red; font-style:italic;">Password / Username Salah Bosss</p>
                 <?php endif;?>       
