@@ -20,7 +20,8 @@
           <li ><a href="laporan_sampah_user.php">LAPORAN SAMPAH</a></li>
           <li><a href="laporan_masalah_user.php">LAPORAN MASALAH</a></li>
           <li ><a href="jadwal_kebersihan_user.php">JADWAL KEBERSIHAN</a></li>
-          
+          <form class="logout-btn"  action="index.php" method="post"><button type="submit" name="logout">logout</button></form>
+
         </ul>    
       </nav>
       </header>

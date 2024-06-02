@@ -50,15 +50,14 @@ $mysqli->close();
 
 function kirim2 ($data){
 
-    $nama = $_POST['nama']; 
-    $RT = $_POST['RT']; 
-    $lokasi = $_POST['lokasi']; 
     $tanggal = $_POST['tanggal'];
     $tugas = $_POST['tugas'];
     $jam = $_POST['jam'];
+    $id_user = $_SESSION['iduser'];
+
     $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
     
-    $query = "INSERT INTO jadwal_kebersihan VALUES ('','$nama','$RT','$lokasi','$tanggal','$tugas','$jam')";
+    $query = "INSERT INTO jadwal_kebersihan VALUES ('','$id_user','$tanggal','$tugas','$jam')";
 
     if ($mysqli->query($query)) {
     

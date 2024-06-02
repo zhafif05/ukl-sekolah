@@ -24,13 +24,12 @@ $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
 if(isset($_POST['simpan2'])){
     $id = $_POST['id'];
-    $lokasi = $_POST['lokasi']; 
     $tanggal = $_POST['tanggal'];
     $tugas = $_POST['tugas'];
     $jam = $_POST['jam'];
     
     //buat query update
-    $result = mysqli_query($mysqli, "UPDATE jadwal_kebersihan SET lokasi='$lokasi', tugas='$tugas', tanggal='$tanggal', jam='$jam' WHERE id=$id");
+    $result = mysqli_query($mysqli, "UPDATE jadwal_kebersihan SET tugas='$tugas', tanggal='$tanggal', jam='$jam' WHERE id=$id");
     header('location:jadwal_kebersihan_RT.php');
 
 }

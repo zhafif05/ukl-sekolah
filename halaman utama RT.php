@@ -30,7 +30,8 @@ if(isset($_POST['logout'])){
           <li ><a href="laporan_sampah_RT.php">LAPORAN SAMPAH</a></li>
           <li><a href="laporan_masalah_RT.php">LAPORAN MASALAH</a></li>
           <li ><a href="jadwal_kebersihan_RT.php">JADWAL KEBERSIHAN</a></li>
-          <a href="logout.php" class="btn">Logout</a>
+          <form class="logout-btn"  action="index.php" method="post"><button type="submit" name="logout">logout</button></form>
+
         </ul>
 
       </nav>

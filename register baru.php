@@ -52,13 +52,7 @@ if(isset($_POST['register'])){
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password">
                 </div>
-                <div class="form-group">
-                    <label for="role">Sebagai</label>
-                    <select name="role" id="role" require>
-                        <option value="Ketua RT">Ketua Rt</option>
-                        <option value="pengguna">Pengguna</option>
-                    </select>
-                </div>
+                <input type="hidden" value="pengguna" id="role" name="role">
                 <div class="form-group">
                     <label for="username">RT</label>
                     <input type="number" min="1" max="10" class="form-control" id="RT" name="RT" placeholder="Masukkan RT">

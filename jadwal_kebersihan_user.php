@@ -44,7 +44,19 @@ $nomor=1;
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query_mysql=mysqli_query($mysqli, "SELECT * FROM jadwal_kebersihan ") or die (mysqli_error());
+$query_mysql=mysqli_query($mysqli, "SELECT 
+jadwal_kebersihan.tanggal,
+jadwal_kebersihan.jam,
+jadwal_kebersihan.tugas,
+user.nama,
+user.RT,
+user.alamat
+FROM 
+jadwal_kebersihan
+JOIN 
+user 
+ON 
+jadwal_kebersihan.id_user = user.iduser;") or die (mysqli_error());
 
 while($data= mysqli_fetch_array($query_mysql)){
 ?>
@@ -53,7 +65,7 @@ while($data= mysqli_fetch_array($query_mysql)){
     <td><?php echo $nomor++;?></td>
     <td><?php echo $data["nama"];?></td>
     <td><?php echo $data["RT"];?></td>
-    <td><?php echo $data["lokasi"];?></td>
+    <td><?php echo $data["alamat"];?></td>
     <td><?php echo $data["tanggal"];?></td>
     <td><?php echo $data["tugas"];?></td>
     <td><?php echo $data["jam"];?></td>

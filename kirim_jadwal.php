@@ -51,17 +51,6 @@ if(isset($_POST['kirim2'])){
             <h1>Jadwal_kebersihan</h1>
             <form action="" method="post">
             <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
-                </div>
-            <div class="form-group">
-                    <label for="RT">Rt</label>
-                    <input type="number" min="1" max="10" class="form-control" id="RT" name="RT">
-                </div>
-                <div class="form-group">
-                    <label for="lokasi">Lokasi</label>
-                    <input type="text" class="form-control" id="lokasi" name="lokasi">
-                </div>
                 <div class="form-group">
                     <label for="tanggal">Tanggal</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal" >

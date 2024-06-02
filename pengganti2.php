@@ -14,7 +14,6 @@ $result = mysqli_query($mysqli,"SELECT * FROM jadwal_kebersihan WHERE id=$id");
 
 while($data = mysqli_fetch_array($result))
 {
-$lokasi = $data['lokasi']; 
 $tanggal = $data['tanggal'];
 $tugas = $data['tugas'];
 $jam = $data['jam'];
@@ -38,12 +37,8 @@ $jam = $data['jam'];
             <h1>Jadwal_kebersihan</h1>
             <form action="edit.php" method="post">
                 <div class="form-group">
-                    <label for="lokasi">lokasi</label>
-                    <input type="text" class="form-control" id="lokasi" name="lokasi"value="<?php echo $lokasi ;?>">
-                </div>
-                <div class="form-group">
                     <label for="tanggal">tanggal</label>
-                    <input type="text" class="form-control" id="tanggal" name="tanggal" value="<?php echo $tanggal ;?>">
+                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?php echo $tanggal ;?>">
                 </div>
                 <div class="form-group">
                     <label for="tugas">tugas</label>
@@ -51,7 +46,7 @@ $jam = $data['jam'];
                 </div>
                 <div class="form-group">
                     <label for="jam">jam</label>
-                    <input type="text" class="form-control" id="jam" name="jam" value="<?php echo $jam ;?>">>
+                    <input type="time" class="form-control" id="jam" name="jam" value="<?php echo $jam ;?>">>
                 </div>
                 <button name="simpan2" type="submit" class="btn btn-primary" value="simpan2">Kirim</button>
                 <input type="hidden" name="id" value=<?php echo $_GET['id'] ;?>>
