@@ -42,11 +42,15 @@
 
 <?php
 
+session_start();
+
 $nomor=1;
+$RT = $_SESSION['RT'];
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query_mysql=mysqli_query($mysqli,"SELECT laporan_sampah.id, laporan_sampah.jenis_sampah, laporan_sampah.berat_sampah, laporan_sampah.lokasi_pembuangan, laporan_sampah.tanggal_waktu, user.nama, user.RT FROM laporan_sampah JOIN user ON laporan_sampah.iduserr = user.iduser;") or die (mysqli_error());
+$query_mysql=mysqli_query($mysqli,"SELECT laporan_sampah.id, laporan_sampah.jenis_sampah, laporan_sampah.berat_sampah, laporan_sampah.lokasi_pembuangan, laporan_sampah.tanggal_waktu, user.nama, user.RT FROM laporan_sampah JOIN user ON laporan_sampah.iduserr = user.iduser WHERE user.RT = '$RT';") or die (mysqli_error());
+
 
 
 

@@ -1,51 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZIP LAST</title>
-    <link rel="stylesheet" href="tabel.css">
-</head>
-<body >
-    <header class="kepala">
-      <div class="nama">
-        <div class="namapertama">ZIP</div>
-        <div class="namaterakhir"> LAST</div>
-      </div>
-      <nav >
-        <ul  class="menubar">
-          <li><a href="halaman utama RT.php">HOME </a></li>
-          <li ><a href="laporan_sampah_RT.php">LAPORAN SAMPAH</a></li>
-          <li><a href="laporan_masalah_RT.php">LAPORAN MASALAH</a></li>
-          <li ><a href="jadwal_kebersihan_RT.php"class="p">JADWAL KEBERSIHAN</a></li>
-
-        </ul>
-      </nav>
-      </header>
-      <section class="badan" >  
-      <h1>Jadwal Kebersihan</h1>
-      <div class="center">
 <?php
+session_start();
 
-$nomor=1;
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-$mysqli = new mysqli('localhost', 'root', '', 'intako');
 
-$query_mysql=mysqli_query($mysqli, "SELECT * FROM tas ") or die (mysqli_error());
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-while($data= mysqli_fetch_array($query_mysql)){
+
+$query = "SELECT laporan_masalah.idmasalah,laporan_masalah.tanggal_waktu,laporan_masalah.laporan,user.nama,user.RT,user.alamat FROM laporan_masalah JOIN user ON laporan_masalah.iduser = user.iduser ";
+if ($mysqli->query($query)) {
+    ;
+    
+} else {
+    echo "Error: " . $mysqli->error;
+}
+//sudah ada username 
+$result = mysqli_query($mysqli," SELECT * FROM user WHERE RT= ' $_SESSION['RT'] ' ");
+
+if(mysqli_fetch_assoc($result )){
+
+  header("location:laporan_masalah_RT.php");
+
+
+}
+
+
+$mysqli->close();
+
+}
 ?>
-<ul>
-    <li><?php echo $data["nama"];?></li>
-    <?php }?>
-</ul>
-</div>
-  <div> 
-    <ul class="pading">
-      <li><a href="halaman utama RT.php" class ="pencet">Kembali</a></li>
-      <li><a href="kirim_jadwal.php" class ="pencet">Kirim data</a></li>
-    </ul>
-  </div>
-</section>
- </body>
-   

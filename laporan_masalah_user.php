@@ -72,7 +72,11 @@ if(isset($_POST['submit'])){
 </div>
 <div>
 <ul class="pading">
-      <li><a href="halaman utama_user.php" class ="pencet">Kembali</a></li>
+    <li><a href="halaman utama_user.php" class ="pencet">Kembali</a></li>
+    <form action="user_history.php" method="get">
+    <button type="submit">Lihat History</button>
+    </form>
+
     </ul>
    </div>
       </section>  

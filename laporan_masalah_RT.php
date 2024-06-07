@@ -34,37 +34,57 @@
             <th>RT</th>
             <th>Isi</th>
             <th>Tanggal & Waktu</th>
+            <th>Progres</th>
 
 
         </tr>
     
 
 
-<?php
+        <?php
+                session_start();
 
-$nomor=1;
+                // Cek apakah sesi RT ada
+                if(isset($_SESSION['RT'])) {
+                    $RT = $_SESSION['RT'];
 
-$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
+                    $nomor = 1;
+                    $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query_mysql=mysqli_query($mysqli, "SELECT * FROM laporan_masalah ") or die (mysqli_error());
+                    if ($mysqli->connect_error) {
+                        die("Koneksi gagal: " . $mysqli->connect_error);
+                    }
 
+                    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+                        $sql = "SELECT laporan_masalah.idmasalah, laporan_masalah.tanggal_waktu, laporan_masalah.laporan, user.nama, user.RT, laporan_masalah.status
+                                FROM laporan_masalah
+                                JOIN user ON laporan_masalah.iduser = user.iduser
+                                WHERE user.RT = '$RT'" ;
 
-$resutl=mysqli_query($mysqli, "SELECT laporan_masalah.idmasalah,laporan_masalah.laporan,laporan_masalah.tanggal_waktu,user.nama,user.RT FROM laporan_masalah JOIN user ON laporan_masalah.iduser = user.iduser") or die (mysqli_error());
+                        $result = $mysqli->query($sql);
 
+                        if ($result->num_rows > 0) {
+                            while ($data = $result->fetch_assoc()) {
+                                echo "<tr>
+                                        <td>{$nomor}</td>
+                                        <td>{$data['nama']}</td>
+                                        <td>{$data['RT']}</td>
+                                        <td>{$data['laporan']}</td>
+                                        <td>{$data['tanggal_waktu']}</td>
+                                        <td>{$data['status']}</td>
+                                      </tr>";
+                                $nomor++;
+                            }
+                        } else {
+                            echo "<tr><td colspan='6'>Tidak ada data untuk RT ini</td></tr>";
+                        }
+                    }
+                    $mysqli->close();
+                } else {
+                    echo "<tr><td colspan='6'>Sesi RT tidak ditemukan. Harap login terlebih dahulu.</td></tr>";
+                }
+                ?>
 
-while($data= mysqli_fetch_array($resutl)){
-?>
-
-<tr>
-    <td><?php echo $nomor++;?></td>
-    <td><?php echo $data["nama"];?></td>
-    <td><?php echo $data["RT"];?></td>
-    <td><?php echo $data["laporan"];?></td>
-    <td><?php echo $data["tanggal_waktu"];?></td>
-
-    <?php }?>
-
-</tr>
 </table>
 </div>
 <div> 

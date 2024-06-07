@@ -8,7 +8,7 @@ function submit ($data){
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query = "INSERT INTO laporan_masalah VALUES ('','$laporan','$tanggal', '$id_user')";
+$query = "INSERT INTO laporan_masalah VALUES ('','$laporan','$tanggal', '$id_user','Belum Selesai')";
 if ($mysqli->query($query)) {
 
     echo "<script>
@@ -21,6 +21,9 @@ if ($mysqli->query($query)) {
 $mysqli->close();
 
 }
+
+
+
 
 
 function kirim ($data){

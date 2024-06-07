@@ -47,7 +47,7 @@ $lokasi_pembuangan = $data['lokasi_pembuangan'];
                 </div>
                 <div class="form-group">
                     <label for="tanggal_waktu">Tanggal_waktu</label>
-                    <input type="text" class="form-control" id="tanggal_waktu" name="tanggal_waktu" value="<?php echo $tanggal_waktu ;?>">
+                    <input type="date" class="form-control" id="tanggal_waktu" name="tanggal_waktu" value="<?php echo $tanggal_waktu ;?>">
                 </div>
                 <div class="form-group">
                     <label for="lokasi_pembuangan">Lokasi_pembuangan</label>

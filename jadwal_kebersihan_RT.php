@@ -42,24 +42,16 @@
 
 <?php
 
+session_start();
+
 $nomor=1;
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query_mysql=mysqli_query($mysqli, "SELECT 
-jadwal_kebersihan.id,
-jadwal_kebersihan.tanggal,
-jadwal_kebersihan.jam,
-jadwal_kebersihan.tugas,
-user.nama,
-user.RT,
-user.alamat
-FROM 
-jadwal_kebersihan
-JOIN 
-user 
-ON 
-jadwal_kebersihan.id_user = user.iduser;") or die (mysqli_error());
+$RT = $_SESSION['RT'];
+
+$query_mysql=mysqli_query($mysqli, "SELECT jadwal_kebersihan.id,jadwal_kebersihan.tanggal,jadwal_kebersihan.jam,jadwal_kebersihan.tugas,user.nama,
+user.RT,user.alamat FROM jadwal_kebersihan JOIN user ON jadwal_kebersihan.id_user = user.iduser WHERE user.RT = '$RT';") or die (mysqli_error());
 
 while($data= mysqli_fetch_array($query_mysql)){
 ?>

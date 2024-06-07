@@ -42,21 +42,15 @@
 
 $nomor=1;
 
-$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
+session_start();
 
-$query_mysql=mysqli_query($mysqli, "SELECT 
-jadwal_kebersihan.tanggal,
-jadwal_kebersihan.jam,
-jadwal_kebersihan.tugas,
-user.nama,
-user.RT,
-user.alamat
-FROM 
-jadwal_kebersihan
-JOIN 
-user 
-ON 
-jadwal_kebersihan.id_user = user.iduser;") or die (mysqli_error());
+$mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
+$RT = $_SESSION['RT'];
+
+$query_mysql=mysqli_query($mysqli, "SELECT jadwal_kebersihan.id, jadwal_kebersihan.tanggal, jadwal_kebersihan.tugas, jadwal_kebersihan.jam, user.nama, user.RT , user.alamat
+FROM jadwal_kebersihan
+JOIN user ON jadwal_kebersihan.id_user = user.iduser
+WHERE user.RT = '$RT'") or die (mysqli_error());
 
 while($data= mysqli_fetch_array($query_mysql)){
 ?>

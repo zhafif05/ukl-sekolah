@@ -41,20 +41,24 @@
     
 
 
-<?php
+        <?php
+
+session_start();
 
 $nomor=1;
+$RT = $_SESSION['RT'];
 
 $mysqli = new mysqli('localhost', 'root', '', 'manejemen_lingkungan');
 
-$query_mysql=mysqli_query($mysqli,"SELECT laporan_sampah.id, laporan_sampah.jenis_sampah, laporan_sampah.berat_sampah, laporan_sampah.lokasi_pembuangan, laporan_sampah.tanggal_waktu, user.nama, user.RT FROM laporan_sampah JOIN user ON laporan_sampah.iduserr = user.iduser;") or die (mysqli_error());
+$query_mysql=mysqli_query($mysqli,"SELECT laporan_sampah.id, laporan_sampah.jenis_sampah, laporan_sampah.berat_sampah, laporan_sampah.lokasi_pembuangan, laporan_sampah.tanggal_waktu, user.nama, user.RT FROM laporan_sampah JOIN user ON laporan_sampah.iduserr = user.iduser WHERE user.RT = '$RT';") or die (mysqli_error());
+
 
 
 
 while($data= mysqli_fetch_array($query_mysql)){
 ?>
 
-<tr >
+<tr>
     <td><?php echo $nomor++;?></td>
     <td><?php echo $data["nama"];?></td>
     <td><?php echo $data["RT"];?></td>
@@ -63,14 +67,17 @@ while($data= mysqli_fetch_array($query_mysql)){
     <td><?php echo $data["tanggal_waktu"];?></td>
     <td><?php echo $data["lokasi_pembuangan"];?></td>
     <td ><span><a href='delet.php?id=<?php echo $data["id"];?>' class="pencett">hapus</a></span></td>
-    <?php ?>
     <td ><span><a href='pengganti.php?id=<?php echo $data["id"];?>' class="pencett">edit data</a></span></td>
     <?php }?>
 
 </tr>
 </table>
 <div >
-<a href="laporan_sampah_RT.php" class="pencet">Kembali</a>
+  
+  <ul class="pading">
+      <li><a href="laporan_sampah_RT.php" class ="pencet">Kembali</a></li>
+    </ul>
+
    </div>
 </section>
  </body>
